@@ -2,6 +2,8 @@
 let gulp = require('gulp')
 let sass = require('gulp-sass')
 let del = require('del')
+let webpack = require('gulp-webpack')
+let fs = require('fs')
 
 let jsPaths = ['dev/js/*.js']
 let htmlPaths = ['dev/**/*.html']
@@ -24,6 +26,18 @@ gulp.task('copy-js', () => {
   del.sync([output + 'js'])
   gulp.src(jsPaths)
     .pipe(gulp.dest(output + 'js'))
+})
+
+gulp.task('webpack', () => {
+  try {
+    fs.unlinkSync(output + 'js/app.js');
+  }
+  catch (e) {
+    console.log(e)
+  }
+  return gulp.src(require('./webpack.config.js').entry)
+    .pipe(webpack(require('./webpack.config.js')))
+    .pipe(gulp.dest(output + 'js'));
 })
 
 gulp.task('copy-html', () => {
