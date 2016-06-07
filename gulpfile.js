@@ -52,7 +52,7 @@ gulp.task('copy-media', () => {
     .pipe(gulp.dest(output + 'media'))
 })
 
-gulp.task('copy-public', ['sass', 'copy-js', 'copy-html', 'copy-media'])
+gulp.task('copy-public', ['sass', 'copy-html', 'copy-media'])
 
 gulp.task('watch', () =>{
   gulp.watch(scssPaths, ['sass'])
