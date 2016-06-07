@@ -61,16 +61,28 @@ a {
 	}
 }
 
+.bottom {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+}
+
 .hours {
 	text-align: center;
 	font-size: 1.8em;
 	ul {
 		font-family: 'Open Sans Condensed', sans-serif;
 	}
-	ol {
-	}
 }
 
 .contact {
 	text-align: center;
+	font-size: 1.8em;
+	a {
+		color: darkslategray;
+	}
+	ul {
+		font-family: 'Open Sans Condensed', sans-serif;
+	}
 }
+
