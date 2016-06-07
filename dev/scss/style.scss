@@ -9,6 +9,8 @@ $redcup: url("../media/redcup.jpe");
 
 
 body {
+	font-family: 'Alegreya SC', serif;
+	/*font-family: 'Balthazar', serif;*/
 	background-image: $darkwood;
 	background-repeat: repeat;
 	/*background-size: cover;*/
@@ -48,3 +50,13 @@ a {
 	}
 }
 
+.intro {
+	font-size: 1.8em;
+	padding: 0 2em;
+	h1 {
+		text-align: center;
+	}
+	p {
+		font-family: 'Open Sans Condensed', sans-serif;
+	}
+}
