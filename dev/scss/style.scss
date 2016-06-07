@@ -1,11 +1,10 @@
-/*images*/
-$wood: url("../media/background-wood.png");
+/* Background pattern from subtlepatterns.com */
+/* Content images from unspash.com */
+
+// images
 $darkwood: url("../media/background-darkwood.png");
-$lightbeans: url("../media/bean.jpe");
-$darkbeans: url("../media/darkbeans.jpe");
 $paper: url("../media/background-paper.png");
-$naturepaper: url("../media/background-paper-natural.png");
-$redcup: url("../media/redcup.jpe");
+$redcup: url("../media/redcup.jpg");
 
 
 body {
@@ -20,7 +19,11 @@ body {
 
 a {
 	color: white;
+	&:hover {
+		color: lightslategray;
+	}
 }
+
 
 .jumbotron {
 	background-image: $darkwood;
@@ -80,6 +83,9 @@ a {
 	font-size: 1.8em;
 	a {
 		color: darkslategray;
+		&:hover {
+			color: lightslategray;
+		}
 	}
 	ul {
 		font-family: 'Open Sans Condensed', sans-serif;
